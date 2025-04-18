@@ -1,0 +1,47 @@
+site_name: Semblance AI Documentation
+site_url: https://eooo-io.github.io/semblance-ai/
+repo_url: https://github.com/eooo-io/semblance-ai
+repo_name: eooo-io/semblance-ai
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+# extra_css:
+#   - stylesheets/extra.css
+
+plugins:
+  - search
+  - monorepo
+docs_dir: docsrc
+site_dir: docs
+nav:
+  - Home: index.md
+  - Overview:
+      - Project Vision: overview/project-vision.md
+      - Ecosystem Map: overview/ecosystem-map.md
+  - Standards:
+      - Coding Guidelines: standards/coding-guidelines.md
+      - Documentation Guidelines: standards/documentation-guidelines.md
+      - KAG Data Curation: standards/kag-data-curation.md
+  - Sub-Repositories:
+      - Data Curation: sub-repos/data-curation.md
+      - Model Training: sub-repos/model-training.md
+      - Experiments: sub-repos/experiments.md
+  - Resources:
+      - Tools: resources/tools.md
+      - FAQ: resources/faq.md

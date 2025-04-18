@@ -2,7 +2,7 @@
 ### Crafting a Digital Reflection
 
 
-<img src="https://github.com/eooo-io/semblance-ai/blob/main/assets/sempblance-logo.png" alt="isolated" width="250"/>
+<img src="https://github.com/eooo-io/semblance-ai/blob/main/assets/semblance-logo.png" alt="isolated" width="250"/>
 
 ### Overview
 Semblance AI is an experimental project to create a highly personalized AI model that acts as a digital extension of an individual’s knowledge, beliefs, values, and creative essence. Unlike traditional AI assistants trained on broad, web-scraped datasets, Semblance AI empowers users to curate their own training corpus—books, films, music, personal writings, and ethical frameworks—to build a model that mirrors their unique worldview. Think of it as a "semblance" of yourself: not a perfect copy, but a subjective representation that can serve as an interlocutor, creative collaborator, or defender of your ideas.

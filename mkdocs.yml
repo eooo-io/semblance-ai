@@ -44,4 +44,5 @@ nav:
       - Experiments: sub-repos/experiments.md
   - Resources:
       - Tools: resources/tools.md
+      - Tools Checklist: resoureces/tools-checklist.md 
       - FAQ: resources/faq.md

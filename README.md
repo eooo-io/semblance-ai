@@ -59,21 +59,32 @@ Open-source select components and invite community-driven experiments.
 
 
 
-Challenges & Considerations
+### Challenges & Considerations
 
-**Privacy:** Ensuring user data is secure and not misused.
-**Bias:** Mitigating echo chambers from subjective training data.
-**Technical Limits:** Scaling personalized models for individual use.
-**Ethics:** Defining boundaries for AI representation of self.
+ - **Privacy:** Ensuring user data is secure and not misused.
+ - **Bias:** Mitigating echo chambers from subjective training data.
+ - **Technical Limits:** Scaling personalized models for individual use.
+ - **Ethics:** Defining boundaries for AI representation of self.
 
-**License**
+--- 
+
+### Detailed Project Documentation
+https://eooo-io.github.io/semblance-ai/
+
+---
+
+### License
 This project is licensed under the MIT License. See LICENSE for details.
 Contact
 
-GitHub Issues: Report bugs or suggest features via Issues.
-Email: Reach out at dev@eooo.io.
-Website: Learn more at https://eooo.io
+#### GitHub Issues: Report bugs or suggest features via Issues.
+
+#### Email: Reach out at dev@eooo.io.
+#### Website: Learn more at https://eooo.io
 
 
-“What is a man but the sum of his memories? We are the stories we live, the tales we tell ourselves.”Join us in exploring what it means to craft a digital semblance of those stories.
+> “What is a man but the sum of his memories? We are the stories we live, the tales we tell ourselves.”
+
+Join us in exploring what it means to craft a digital semblance of those stories.
+
 #ai #semblance-ai #personalized-ai #knowledge-augmentation

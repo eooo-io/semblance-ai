@@ -6,13 +6,13 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: indigo
+      primary: black
       accent: pink
       toggle:
         icon: material/lightbulb-outline
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
+      primary: black
       accent: pink
       toggle:
         icon: material/lightbulb

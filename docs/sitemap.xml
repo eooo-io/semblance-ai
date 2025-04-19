@@ -2,10 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://eooo-io.github.io/semblance-ai/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-04-19</lastmod>
+    </url>
+    <url>
+         <loc>https://eooo-io.github.io/semblance-ai/overview/ecosystem-map/</loc>
+         <lastmod>2025-04-19</lastmod>
     </url>
     <url>
          <loc>https://eooo-io.github.io/semblance-ai/overview/project-vision/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-04-19</lastmod>
+    </url>
+    <url>
+         <loc>https://eooo-io.github.io/semblance-ai/resources/faq/</loc>
+         <lastmod>2025-04-19</lastmod>
+    </url>
+    <url>
+         <loc>https://eooo-io.github.io/semblance-ai/resources/tools-checklist/</loc>
+         <lastmod>2025-04-19</lastmod>
+    </url>
+    <url>
+         <loc>https://eooo-io.github.io/semblance-ai/resources/tools/</loc>
+         <lastmod>2025-04-19</lastmod>
     </url>
 </urlset>

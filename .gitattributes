@@ -1,38 +1,24 @@
-# Normalize text files for cross-platform compatibility
+# Set text normalization
 * text=auto
 
-# Treat these as binary (no diffing, no EOL normalization)
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.ico binary
-*.pdf binary
-*.zip binary
-*.tar.gz binary
-*.tgz binary
+# Explicitly mark all relevant content as documentation
+*.md linguist-documentation
+*.markdown linguist-documentation
+docs/** linguist-documentation
+content/** linguist-documentation
+static/** linguist-generated
+public/** linguist-generated
 
-# Code files
-*.py text eol=lf linguist-language=Python
-*.ts text eol=lf linguist-language=TypeScript
-*.tsx text eol=lf linguist-language=TypeScript
-*.js text eol=lf linguist-language=JavaScript
-*.php text eol=lf linguist-language=PHP
-*.sh text eol=lf linguist-language=Shell
-
-# Mark build and vendored directories so they don't count toward stats
+# Ignore theme and build output for language stats
+theme/** linguist-generated
 build/** linguist-generated
 dist/** linguist-generated
+assets/** linguist-generated
 node_modules/** linguist-vendored
-public/** linguist-generated
-static/** linguist-generated
-docs/** linguist-documentation
 
-# Markdown files are documentation
-*.md linguist-documentation
-
-# CI / DevOps stuff
-*.yml text eol=lf
-*.yaml text eol=lf
-Dockerfile text eol=lf
-.env text eol=lf
+# Any embedded JS/CSS/HTML are support files, not main language
+*.css linguist-generated
+*.scss linguist-generated
+*.js linguist-generated
+*.ts linguist-generated
+*.html linguist-generated

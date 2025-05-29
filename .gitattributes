@@ -1,7 +1,7 @@
-# Ensure consistent line endings
+# Normalize text files for cross-platform compatibility
 * text=auto
 
-# Define binary file types to avoid eol normalization
+# Treat these as binary (no diffing, no EOL normalization)
 *.png binary
 *.jpg binary
 *.jpeg binary
@@ -12,42 +12,27 @@
 *.tar.gz binary
 *.tgz binary
 
-# Mark specific types as linguist-documentation
-*.md linguist-documentation
+# Code files
+*.py text eol=lf linguist-language=Python
+*.ts text eol=lf linguist-language=TypeScript
+*.tsx text eol=lf linguist-language=TypeScript
+*.js text eol=lf linguist-language=JavaScript
+*.php text eol=lf linguist-language=PHP
+*.sh text eol=lf linguist-language=Shell
+
+# Mark build and vendored directories so they don't count toward stats
+build/** linguist-generated
+dist/** linguist-generated
+node_modules/** linguist-vendored
+public/** linguist-generated
+static/** linguist-generated
 docs/** linguist-documentation
 
-# Frontend (if applicable)
-*.js text eol=lf
-*.ts text eol=lf
-*.jsx text eol=lf
-*.tsx text eol=lf
-*.html text eol=lf
-*.css text eol=lf
-*.scss text eol=lf
+# Markdown files are documentation
+*.md linguist-documentation
 
-# Backend
-*.py text eol=lf
-*.php text eol=lf
-*.sh text eol=lf
-
-# YAML / JSON config files
+# CI / DevOps stuff
 *.yml text eol=lf
 *.yaml text eol=lf
-*.json text eol=lf
-
-# Docker and DevOps
-Dockerfile* text eol=lf
-*.env text eol=lf
-*.tf text eol=lf
-*.hcl text eol=lf
-
-# CI/CD Configs
-.github/** text eol=lf
-.gitlab/** text eol=lf
-
-# Linguist overrides (if needed)
-# Uncomment if any folders are being misclassified
-# vendor/** linguist-vendored
-# node_modules/** linguist-vendored
-# dist/** linguist-generated
-# build/** linguist-generated
+Dockerfile text eol=lf
+.env text eol=lf

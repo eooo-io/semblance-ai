@@ -1,0 +1,53 @@
+# Ensure consistent line endings
+* text=auto
+
+# Define binary file types to avoid eol normalization
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.tgz binary
+
+# Mark specific types as linguist-documentation
+*.md linguist-documentation
+docs/** linguist-documentation
+
+# Frontend (if applicable)
+*.js text eol=lf
+*.ts text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+
+# Backend
+*.py text eol=lf
+*.php text eol=lf
+*.sh text eol=lf
+
+# YAML / JSON config files
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+
+# Docker and DevOps
+Dockerfile* text eol=lf
+*.env text eol=lf
+*.tf text eol=lf
+*.hcl text eol=lf
+
+# CI/CD Configs
+.github/** text eol=lf
+.gitlab/** text eol=lf
+
+# Linguist overrides (if needed)
+# Uncomment if any folders are being misclassified
+# vendor/** linguist-vendored
+# node_modules/** linguist-vendored
+# dist/** linguist-generated
+# build/** linguist-generated

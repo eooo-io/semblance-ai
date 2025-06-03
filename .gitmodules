@@ -1,0 +1,6 @@
+[submodule "components/curation"]
+	path = components/curation
+	url = https://github.com/eooo-io/semblance-curation
+[submodule "components/rag"]
+	path = components/rag
+	url = https://github.com/eooo-io/semblance-rag

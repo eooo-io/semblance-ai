@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: Semblance AI
-  text: Crafting a Digital Reflection
-  tagline: A personalized AI model that mirrors your unique worldview
+  name: "Semblance AI"
+  text: "Personal Knowledge Augmented Generation"
+  tagline: "Build your personal AI companion that thinks and creates like you"
   image:
     src: /assets/semblance-logo.png
     alt: Semblance AI Logo
@@ -17,21 +17,17 @@ hero:
       link: https://github.com/eooo-io/semblance-ai
 
 features:
-  - icon: 🧠
-    title: Personal Knowledge Augmentation
-    details: Train models using your own curated data—books, films, music, and personal writings—to align with your identity.
-  
-  - icon: 🔄
-    title: Intellectual Sparring
-    details: Debate ideas with an AI that understands your reasoning style and can engage meaningfully with your thoughts.
-  
-  - icon: 🎨
-    title: Creative Collaboration
-    details: Generate stories, art, or music aligned with your aesthetic preferences and creative vision.
-  
-  - icon: 📚
-    title: Personal Archivist
-    details: Organize and synthesize your knowledge and experiences into a coherent digital knowledge base.
+  - title: Personal Knowledge Augmentation
+    details: Train models that understand and reflect your unique knowledge and perspective
+    
+  - title: Secure and Private
+    details: Your data stays under your control with local-first architecture
+    
+  - title: Extensible Architecture
+    details: Built with modularity in mind for easy customization and extension
+
+  - title: Documentation
+    details: Comprehensive guides and API references for developers
 
 ---
 
@@ -71,4 +67,6 @@ Join us in exploring what it means to craft a digital semblance of those stories
 - [Quick Start Guide](/getting-started/quick-start)
 - [Core Architecture](/core/)
 - [GitHub Repository](https://github.com/eooo-io/semblance-ai)
-- [Contact Us](mailto:dev@eooo.io) 
+- [Contact Us](mailto:dev@eooo.io)
+
+<!-- Last updated: 2024-03-19 --> 

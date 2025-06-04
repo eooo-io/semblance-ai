@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   docs:
@@ -6,10 +6,13 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
+      # Map container's port 5173 to host's port 4173 (preview port)
       - "4173:5173"
     volumes:
-      - .:/docs
-      - /docs/node_modules
+      - ./docs-new:/docs/docs-new
+      - ./.vitepress:/docs/.vitepress
+      - ./package.json:/docs/package.json
+      - ./package-lock.json:/docs/package-lock.json
     environment:
       - NODE_ENV=development
-    command: npm run docs:dev -- --host 0.0.0.0 
+    command: npm run docs:dev -- --host 0.0.0.0

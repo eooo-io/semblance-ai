@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Semblance AI Project",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "docs:dev": "vitepress dev docs-new",
     "docs:build": "vitepress build docs-new",
@@ -15,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^20.11.24",
     "markdown-it": "^14.0.0",
-    "markdown-it-mathjax3": "^4.3.2"
+    "markdown-it-mathjax3": "^4.3.2",
+    "typescript": "^5.0.0"
   }
 } 

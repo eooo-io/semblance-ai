@@ -1,10 +1,20 @@
 import { defineConfig } from 'vitepress'
 
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Semblance AI Documentation',
   description: 'Documentation for the Semblance AI Project',
   base: '/semblance-ai-project/',
   ignoreDeadLinks: true,  // Temporarily ignore dead links
+  
+  vite: {
+    ssr: {
+      noExternal: ['vitepress']
+    },
+    build: {
+      target: 'esnext'
+    }
+  },
   
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],

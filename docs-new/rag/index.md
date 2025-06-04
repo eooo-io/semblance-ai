@@ -1,5 +1,31 @@
 # RAG System
 
+The Retrieval-Augmented Generation (RAG) system provides intelligent document processing and question answering capabilities.
+
+## Services
+
+The system includes several services that work together:
+
+- **Web Interface**: Available at `http://localhost:3000` in development
+- **API Server**: Available at `http://localhost:8000` in development
+- **Kibana**: Available at `http://localhost:5601` in development
+- **Vector Store**: Available at `http://localhost:9000` in development
+
+## Documentation
+
+- [Deployment Guide](/rag/deployment)
+- [API Reference](/rag/api-reference)
+- [Architecture Overview](/rag/architecture)
+- [Configuration Guide](/rag/configuration)
+
+## Development
+
+For development setup and contribution guidelines, see:
+
+- [Local Development Setup](/development/local-setup)
+- [Contributing Guidelines](/development/contributing)
+- [Testing Guide](/development/testing)
+
 Semblance RAG is a modular Retrieval-Augmented Generation (RAG) platform designed to support knowledge indexing, semantic search, and language model augmentation workflows. It leverages containerized microservices to ensure a flexible and extensible architecture for AI-enabled applications.
 
 ## Tech Stack

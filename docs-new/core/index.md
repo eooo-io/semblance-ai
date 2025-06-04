@@ -1,4 +1,28 @@
-# Core System Overview
+# Core System
+
+The Core System provides the foundation for Semblance AI's functionality.
+
+## Components
+
+- Model Training Pipeline
+- Inference Engine
+- Data Processing
+- API Layer
+
+## Documentation
+
+- [Training Guide](/core/training)
+- [Configuration Guide](/core/configuration)
+- [Architecture Overview](/core/architecture)
+- [API Reference](/core/api-reference)
+
+## Development
+
+For development setup and contribution guidelines, see:
+
+- [Local Development Setup](/development/local-setup)
+- [Contributing Guidelines](/development/contributing)
+- [Testing Guide](/development/testing)
 
 ## Introduction
 

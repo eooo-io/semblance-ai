@@ -1,127 +1,42 @@
-# Data Curation
+# Data Curation System
 
-Semblance Curation is a comprehensive platform designed for building, maintaining, and curating machine learning datasets. It provides an end-to-end solution for data collection, annotation, preprocessing, and quality control, with built-in support for multi-modal data types.
+The Data Curation System provides tools and interfaces for collecting, annotating, and managing training data.
 
-## Tech Stack
+## Services
 
-### Core Components
-- **Label Studio** - Advanced data annotation
-- **Argilla** - Data quality management
-- **Weaviate** - Vector search and storage
-- **Ollama** - Local model inference
+The system consists of several services that work together:
 
-### Data Storage
-- **PostgreSQL** - Structured data storage
-- **Redis** - High-performance caching
-- **Elasticsearch** - Text search and analytics
-- **MinIO** - Object storage system
+- **Web Interface**: Available at `http://localhost:3000` in development
+- **Label Studio**: Available at `http://localhost:8080` in development
+- **Jupyter Lab**: Available at `http://localhost:8888` in development
+- **MinIO**: Available at `http://localhost:9001` in development
 
-### Development & ML Tools
-- **Jupyter** - Interactive development
-- **MLflow** - Experiment tracking
-- **Ray** - Distributed computing
+## Getting Started
 
-### Monitoring & Observability
-- **Prometheus** - Metrics collection
-- **Grafana** - Visualization dashboard
-- **Loki** - Log aggregation
-- **Jaeger** - Distributed tracing
+1. Follow the [installation guide](/getting-started/installation) to set up the system
+2. Configure your environment using the [configuration guide](/getting-started/configuration)
+3. Learn about [deployment options](/curation/deployment)
 
-## System Requirements
+## Development
 
-### Minimum Requirements
-- 32GB RAM
-- 8+ CPU cores
-- NVIDIA GPU with 8GB+ VRAM (recommended)
-- 500GB+ SSD storage
-- Ubuntu 20.04+ or similar Linux distribution
+For development setup and contribution guidelines, see:
 
-## Key Features
+- [Local Development Setup](/development/local-setup)
+- [Contributing Guidelines](/development/contributing)
+- [API Reference](/curation/api-reference)
 
-### Multi-modal Data Handling
-- Process text, voice, and video data
-- Scalable storage solutions
-- Efficient annotation workflows
-- Format conversion utilities
+## Architecture
 
-### Machine Learning Operations
-- Local LLM inference with Ollama
-- GPU-accelerated processing
-- Vector-based similarity search
-- Comprehensive annotation tools
+The curation system uses a microservices architecture with the following components:
 
-### Advanced Data Management
-- Powerful text search
-- Structured data storage
-- High-performance caching
-- Data versioning and lineage
-- Automated quality checks
-- Real-time monitoring
+- Web UI (React + TypeScript)
+- Label Studio for annotation
+- MinIO for object storage
+- PostgreSQL for metadata
+- Redis for caching
 
-### Development Environment
-- Interactive Jupyter notebooks
-- Data science toolkit
-- Containerized architecture
-- Full GPU support
-- Distributed training
-- Experiment tracking
+For detailed architecture information, see the [Architecture Guide](/curation/architecture).
 
-## Quick Start
+## Security
 
-1. Clone the repository:
-```bash
-git clone https://github.com/eooo-io/semblance-curation.git
-cd semblance-curation
-```
-
-2. Configure environment:
-```bash
-cp env-example .env
-# Edit .env with your settings
-```
-
-3. Start services:
-```bash
-# For production
-docker compose up -d
-
-# For development
-docker compose -f docker-compose.yml -f docker-compose.override.yml up -d
-```
-
-4. Access interfaces:
-- Label Studio: http://localhost:8080
-- Jupyter Lab: http://localhost:8888
-- MinIO Console: http://localhost:9001
-- Grafana: http://localhost:3000
-
-## Optional Components
-
-### MLflow Integration
-```yaml
-# Add to docker-compose.yml
-mlflow:
-  image: ghcr.io/mlflow/mlflow:latest
-  ports:
-    - "5000:5000"
-  environment:
-    - MLFLOW_TRACKING_URI=postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
-  depends_on:
-    - postgres
-```
-
-### Ray Cluster
-```yaml
-# Add to docker-compose.yml
-ray-head:
-  image: rayproject/ray:latest
-  ports:
-    - "8265:8265"  # Dashboard
-    - "10001:10001"  # Client server
-  command: ray start --head --dashboard-host=0.0.0.0
-```
-
-For detailed setup instructions and advanced configuration options, see:
-- [Installation Guide](./installation.md)
-- [Configuration Guide](./configuration.md)
-- [Deployment Guide](./deployment.md) 
+For security best practices and configuration, see the [Security Guide](/curation/security). 

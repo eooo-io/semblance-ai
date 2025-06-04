@@ -185,11 +185,11 @@ docker compose up -d
 make dev
 ```
 
-For detailed setup instructions, see the [Development Guide](../development/local-setup.md).
+For detailed setup instructions, see the [local setup guide](/development/local-setup).
 
 ## Next Steps
 
-- [Installation Guide](../getting-started/installation.md)
-- [Configuration Guide](../getting-started/configuration.md)
+- [installation guide](/getting-started/installation)
+- [configuration guide](/getting-started/configuration)
 - [API Reference](../reference/api.md)
-- [Development Guide](../development/contributing.md) 
+- [contributing guidelines](/development/contributing) 

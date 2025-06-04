@@ -1,37 +1,20 @@
 # Quick Start Guide
 
+Get started with Semblance AI in minutes.
+
 ## Prerequisites
 
 Before you begin, ensure you have:
 
-- Python 3.8 or higher
+- Python 3.9+
 - Docker and Docker Compose
 - Git
 - Node.js 16 or higher (for web interface)
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/eooo-io/semblance-ai.git
-cd semblance-ai
-```
-
-2. Set up the environment:
-```bash
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-3. Configure your environment:
-```bash
-cp .env.example .env
-# Edit .env with your settings
-```
+1. Follow the [installation guide](/getting-started/installation)
+2. Configure your environment using the [configuration guide](/getting-started/configuration)
 
 ## Basic Usage
 
@@ -55,7 +38,6 @@ docker-compose -f components/rag/docker-compose.yml up -d
 
 ## Next Steps
 
-- Read the [Installation Guide](./installation.md) for detailed setup instructions
-- Learn about [Configuration](./configuration.md) options
-- Explore the [Core Architecture](../core/architecture.md)
-- Check out our [Data Curation](../curation/) guide 
+- [Core Concepts](/core/concepts)
+- [Architecture Overview](/core/architecture)
+- [Development Guide](/development/contributing) 

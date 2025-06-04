@@ -1,5 +1,34 @@
 # Deployment Guide
 
+This guide covers deployment options and best practices for the Semblance AI system.
+
+## Prerequisites
+
+Before deploying, ensure you have:
+1. Completed the [configuration setup](/getting-started/configuration)
+2. Reviewed the [security guidelines](/development/security)
+3. Set up [monitoring](/development/monitoring)
+
+## Deployment Options
+
+### Local Deployment
+For development and testing purposes.
+
+### Cloud Deployment
+For production environments.
+
+### Edge Deployment
+For specialized use cases requiring local inference.
+
+## Scaling
+See the [scaling guide](/development/scaling) for detailed information about scaling your deployment.
+
+## Security
+Review the [security documentation](/development/security) for deployment security best practices.
+
+## Monitoring
+Set up proper monitoring using our [monitoring guide](/development/monitoring).
+
 ## Overview
 
 This guide covers deploying Semblance AI in various environments, from development to production. We support multiple deployment options to suit different needs and scales.

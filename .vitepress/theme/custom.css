@@ -1,0 +1,56 @@
+:root {
+  --vp-c-brand: #4051B5;
+  --vp-c-brand-light: #5C6BC0;
+  --vp-c-brand-lighter: #7986CB;
+  --vp-c-brand-dark: #303F9F;
+  --vp-c-brand-darker: #1A237E;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #4051B5 30%, #7986CB);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #4051B5 50%, #7986CB 50%);
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+/* Dark mode adjustments */
+.dark {
+  --vp-c-bg: #1a1a1a;
+  --vp-c-bg-alt: #242424;
+}
+
+.vp-doc a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--vp-c-brand);
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks styling */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+}
+
+/* Custom container styles */
+.custom-block {
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+  margin: 16px 0;
+}
+
+.custom-block.tip {
+  border-color: var(--vp-c-brand);
+  background-color: var(--vp-c-brand-dimm);
+}
+
+/* Navigation styling */
+.nav-bar-title {
+  font-weight: 600;
+}
+
+/* Sidebar styling */
+.sidebar-link-item.active {
+  background-color: var(--vp-c-brand-dimm);
+  border-radius: 6px;
+} 

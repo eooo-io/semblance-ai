@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4173:5173"
+    volumes:
+      - .:/docs
+      - /docs/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run docs:dev -- --host 0.0.0.0 

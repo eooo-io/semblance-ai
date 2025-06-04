@@ -1,0 +1,24 @@
+{
+  "name": "semblance-ai-docs",
+  "version": "1.0.0",
+  "description": "Documentation for Semblance AI Project",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "keywords": [
+    "semblance-ai",
+    "documentation",
+    "ai",
+    "machine-learning"
+  ],
+  "author": "eooo.io",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.3.0"
+  }
+} 

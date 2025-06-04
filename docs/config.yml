@@ -1,0 +1,5 @@
+# Documentation configuration
+google_analytics:
+  key: G-XXXXXXXXXX  # Replace with your actual Google Analytics key
+
+# Additional documentation settings can be added here 

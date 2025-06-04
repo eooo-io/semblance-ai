@@ -2,47 +2,197 @@ site_name: Semblance AI Documentation
 site_url: https://eooo-io.github.io/semblance-ai/
 repo_url: https://github.com/eooo-io/semblance-ai
 repo_name: eooo-io/semblance-ai
+
 theme:
   name: material
-  palette:
-    - scheme: default
-      primary: black
-      accent: pink
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to dark mode
-    - scheme: slate
-      primary: black
-      accent: pink
-      toggle:
-        icon: material/lightbulb
-        name: Switch to light mode
   features:
-    - content.code.copy
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
     - search.suggest
     - search.highlight
-# extra_css:
-#   - stylesheets/extra.css
+    - search.share
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - header.autohide
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: custom-light
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: custom-dark
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    previous: material/arrow-left
+    next: material/arrow-right
 
 plugins:
-  - search
-  - monorepo
-docs_dir: docsrc
-site_dir: docs
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+  - awesome-pages
+  - redirects:
+      redirect_maps: {}
+  - tags:
+      tags_file: tags.md
+  - social:
+      cards_dir: assets/social
+      cards_color:
+        fill: "#4051B5"
+        text: "#FFFFFF"
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            show_source: true
+            show_root_heading: true
+  - pdf-export:
+      combined: true
+  - swagger-ui:
+      spec_url: "openapi.json"
+  - mermaid2:
+      version: 10.2.4
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+  - monorepo:
+      modules:
+        curation:
+          docs_dir: components/curation/docs/docs
+          nav_dir: true
+        rag:
+          docs_dir: components/rag/webapp/docs
+          nav_dir: true
+
+extra:
+  analytics:
+    provider: google
+    property: ${GOOGLE_ANALYTICS_KEY}
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eooo-io/semblance-ai
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/eooo-io/semblance-ai
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/semblance-ai
+  version:
+    provider: mike
+    default: latest
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: materialx.emoji.twemoji
+      emoji_generator: materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: eooo-io
+      repo: semblance-ai
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: pymdownx.superfences.fence_code_format
+        - name: python
+          class: python
+          format: pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.critic
+  - pymdownx.critic
+
 nav:
   - Home: index.md
   - Overview:
       - Project Vision: overview/project-vision.md
       - Ecosystem Map: overview/ecosystem-map.md
+  - Components:
+      - Data Curation: "!monorepo_plugin_include components/curation/docs/docs/"
+      - RAG System:
+          - Overview: sub-repos/rag-overview.md
   - Standards:
       - Coding Guidelines: standards/coding-guidelines.md
       - Documentation Guidelines: standards/documentation-guidelines.md
       - KAG Data Curation: standards/kag-data-curation.md
-  - Sub-Repositories:
-      - Data Curation: sub-repos/data-curation.md
-      - Model Training: sub-repos/model-training.md
-      - Experiments: sub-repos/experiments.md
   - Resources:
       - Tools: resources/tools.md
-      - Tools Checklist: resoureces/tools-checklist.md 
+      - Tools Checklist: resources/tools-checklist.md 
       - FAQ: resources/faq.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/extra.js

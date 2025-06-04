@@ -2,15 +2,18 @@
   "name": "semblance-ai",
   "version": "1.0.0",
   "description": "Semblance AI Project",
+  "type": "module",
   "scripts": {
-    "docs:dev": "cd docs-new && vitepress dev",
-    "docs:build": "cd docs-new && vitepress build",
-    "docs:preview": "cd docs-new && vitepress preview"
+    "docs:dev": "vitepress dev docs-new",
+    "docs:build": "vitepress build docs-new",
+    "docs:preview": "vitepress preview docs-new"
   },
   "dependencies": {
-    "vitepress": "^1.0.0"
+    "vitepress": "^1.0.0-rc.44",
+    "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@types/node": "^20.11.24",
     "markdown-it": "^14.0.0",
     "markdown-it-mathjax3": "^4.3.2"
   }

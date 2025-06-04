@@ -9,7 +9,7 @@
     "docs:preview": "vitepress preview docs-new"
   },
   "dependencies": {
-    "vitepress": "^1.0.0-rc.44",
+    "vitepress": "1.0.0-rc.44",
     "vue": "^3.4.21"
   },
   "devDependencies": {
